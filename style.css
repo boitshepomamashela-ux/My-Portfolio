@@ -88,6 +88,9 @@ h3{font-size:1.23rem;letter-spacing:-.035em;margin:0 0 7px}
 .website-brand img{display:block;width:100%;height:100%;max-height:95px;object-fit:contain}
 .website-brand span{font-size:clamp(1.5rem,3vw,2.35rem);font-weight:700;letter-spacing:-.04em}
 .website-brand-light{background:#f7f7f7;border-radius:12px}
+.websites-page .brand-card{background:var(--brand-background);box-shadow:inset 0 0 0 1px #131e2c14}
+.websites-page .brand-card-light{color:#172230}
+.brand-card-light .pill.light{border-color:#17223026}
 .websites-page .footer{margin-top:auto}
 .footer{display:flex;justify-content:space-between;gap:12px;padding-block:26px;border-top:1px solid #eee;color:#52525b;font-size:.85rem}
 dialog{border:0;border-radius:20px;padding:24px;max-width:min(900px,92vw);color:white;background:#111827}
