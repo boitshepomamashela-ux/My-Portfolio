@@ -83,7 +83,6 @@ if (preview) {
   document.querySelectorAll("[data-preview]").forEach((button) => {
     button.addEventListener("click", () => {
       image.src = `assets/${button.dataset.preview}.webp`;
-      image.classList.toggle("logo-cutout", button.dataset.preview === "barongwa");
       image.alt = button.closest("article").querySelector(".card-art").alt;
       preview.showModal();
     });
