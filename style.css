@@ -62,8 +62,6 @@ h3{font-size:1.23rem;letter-spacing:-.035em;margin:0 0 7px}
 .slide-controls button::before{background:#ffffff45}
 .slide-controls button::after{position:absolute;inset:12px 0 auto;background:white;transform:scaleX(var(--fill,0));transform-origin:left}
 .slide-controls button[aria-pressed=true]::before{background:#ffffff80}
-.slide-playback[hidden]{display:none}
-.slide-playback.pill{padding-inline:12px}
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:28px}
 .card{padding:20px;transition:transform .24s ease,box-shadow .24s ease}
 .card:hover,.card:focus-within{transform:translateY(-4px);box-shadow:0 14px 32px #0002}

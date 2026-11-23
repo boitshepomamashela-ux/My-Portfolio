@@ -15,8 +15,7 @@ if (controls.length) {
     requestAnimationFrame(() => requestAnimationFrame(() => slide.classList.add("animate")));
   };
 
-  const duration = 3000;
-  const playback = document.querySelector(".slide-playback");
+  const duration = 6000;
   const announcements = title.parentElement;
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
   let active = 0;
@@ -24,7 +23,6 @@ if (controls.length) {
   let previousFrame;
   let frame;
   let visible = !("IntersectionObserver" in window);
-  let paused = reducedMotion.matches;
 
   function renderProgress() {
     controls.forEach((button, index) => {
@@ -61,27 +59,18 @@ if (controls.length) {
   function syncPlayback() {
     cancelAnimationFrame(frame);
     previousFrame = undefined;
-    playback.textContent = paused ? "Play" : "Pause";
-    announcements.setAttribute("aria-live", paused ? "polite" : "off");
-    if (visible && !paused && !document.hidden) frame = requestAnimationFrame(tick);
+    announcements.setAttribute("aria-live", reducedMotion.matches ? "polite" : "off");
+    if (visible && !reducedMotion.matches && !document.hidden) frame = requestAnimationFrame(tick);
   }
 
-  playback.hidden = false;
-  playback.addEventListener("click", () => {
-    paused = !paused;
-    syncPlayback();
-  });
   document.addEventListener("visibilitychange", syncPlayback);
-  reducedMotion.addEventListener("change", () => {
-    paused = reducedMotion.matches;
-    syncPlayback();
-  });
+  reducedMotion.addEventListener("change", syncPlayback);
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver(([entry]) => {
       visible = entry.isIntersecting;
       syncPlayback();
     }, { threshold: 0.25 });
-    observer.observe(playback.parentElement);
+    observer.observe(document.querySelector(".slide-navigation"));
   }
 
   controls.forEach((control, index) => control.addEventListener("click", () => selectSlide(index)));
