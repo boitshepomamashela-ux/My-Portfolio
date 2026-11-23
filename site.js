@@ -93,11 +93,10 @@ if (preview) {
 }
 const mode = document.querySelector(".mode");
 if (mode) {
+  const caseStudy = mode.closest(".case");
   mode.addEventListener("click", () => {
     const light = mode.getAttribute("aria-checked") === "false";
     mode.setAttribute("aria-checked", light);
-    document.querySelectorAll("[data-screen]").forEach((image) => {
-      image.src = `assets/${image.dataset.screen}-${light ? "light" : "dark"}.webp`;
-    });
+    caseStudy.classList.toggle("screens-light", light);
   });
 }
