@@ -77,20 +77,6 @@ if (controls.length) {
   renderProgress();
   syncPlayback();
 }
-const preview = document.querySelector("#preview");
-if (preview) {
-  const image = preview.querySelector("img");
-  document.querySelectorAll("[data-preview]").forEach((button) => {
-    button.addEventListener("click", () => {
-      image.src = `assets/${button.dataset.preview}.webp`;
-      image.alt = button.closest("article").querySelector(".card-art").alt;
-      preview.showModal();
-    });
-  });
-  preview.addEventListener("click", (event) => {
-    if (event.target === preview) preview.close();
-  });
-}
 const mode = document.querySelector(".mode");
 if (mode) {
   const caseStudy = mode.closest(".case");
