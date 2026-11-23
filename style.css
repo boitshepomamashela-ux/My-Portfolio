@@ -76,6 +76,15 @@ h3{font-size:1.23rem;letter-spacing:-.035em;margin:0 0 7px}
 .websites header{justify-content:flex-end}
 .websites .card-art{padding:16px}
 .websites .card{min-height:270px}
+.browse-websites{margin-top:24px}
+.websites-page{display:flex;flex-direction:column;min-height:calc(100vh - 40px);padding-top:clamp(40px,7vw,100px)}
+.websites-heading h1{margin:0;font-size:clamp(3rem,7vw,6rem);line-height:1;letter-spacing:-.075em}
+.websites-heading p{margin:18px 0 0;color:#52525b;line-height:1.6}
+.websites-page .grid{margin-block:36px 72px}
+.websites-page .card{display:flex;flex-direction:column}
+.websites-page .card-art{height:clamp(120px,16vw,220px);margin-block:20px}
+.websites-page .card h3{margin-top:auto}
+.websites-page .footer{margin-top:auto}
 .footer{display:flex;justify-content:space-between;gap:12px;padding-block:26px;border-top:1px solid #eee;color:#52525b;font-size:.85rem}
 dialog{border:0;border-radius:20px;padding:24px;max-width:min(900px,92vw);color:white;background:#111827}
 dialog::backdrop{background:#0009}
