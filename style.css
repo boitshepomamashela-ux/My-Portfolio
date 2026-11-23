@@ -146,8 +146,8 @@ dd{margin:8px 0 0}
 @media(max-width:460px){.grid{grid-template-columns:1fr}.card-art{height:175px}.stats div,.impact div{padding:10px}.case-heading{flex-wrap:wrap}.footer{flex-wrap:wrap}.feature header{flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 
-.workshop-banner{display:grid;place-items:center;padding:clamp(48px,8vw,108px) 24px;background:linear-gradient(135deg,#102750,#070d1b 72%);border-radius:10px}
-.workshop-banner img{width:min(450px,100%);height:auto}
+.workshop-banner{overflow:hidden;border-radius:10px;background:#000}
+.workshop-banner img{width:100%;height:auto}
 .case-intro .prototype-note{font-size:.9rem;margin-top:24px}
 .case-figure{margin:24px 0 0}
 .case-figure a{display:block;border-radius:14px}
