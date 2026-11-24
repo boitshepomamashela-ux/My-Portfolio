@@ -155,7 +155,7 @@ dd{margin:8px 0 0}
 .case-figure img{width:100%;height:auto;border-radius:14px;border:1px solid #e2e6ed;box-shadow:0 16px 38px #18274418}
 .case-figure figcaption{margin-top:12px;color:#52525b;font-size:.85rem}
 .case-figure .workshop-screen{position:relative;aspect-ratio:var(--frame-ratio);overflow:hidden;border:1px solid #e2e6ed;box-shadow:0 16px 38px #18274418}
-.workshop-screen img{position:absolute;top:var(--image-top);left:0;width:var(--image-width);max-width:none;border:0;border-radius:0;box-shadow:none}
+.workshop-screen img{position:absolute;top:var(--image-top);left:var(--image-left,0%);width:var(--image-width);max-width:none;border:0;border-radius:0;box-shadow:none}
 .workshop-mobile img{border:0;box-shadow:none;animation:workshop-float 4s ease-in-out both}
 @keyframes workshop-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
 @supports (animation-timeline:view()){
