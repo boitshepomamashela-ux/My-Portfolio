@@ -161,3 +161,9 @@ dd{margin:8px 0 0}
 @supports (animation-timeline:view()){
   .workshop-mobile img{animation-timeline:view();animation-range:entry 0% exit 100%}
 }
+
+.waterhub-card{background:#062153;padding:clamp(14px,1.7vw,22px);border-radius:24px}
+.waterhub-card .waterhub-wordmark{width:min(138px,58%);aspect-ratio:138/32;background:url("assets/waterhub/card-reference.png") 14.1% 7.7% / 213.04% auto no-repeat}
+.waterhub-card .pill{padding-inline:17px}
+.waterhub-card-art{width:calc(100% + 16px);max-width:none;height:auto;margin:18px -8px -3px}
+.waterhub-card p{color:#b5c2da;font-size:.94rem;line-height:1.4}
